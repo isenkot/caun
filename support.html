@@ -1,0 +1,633 @@
+﻿
+<!-- Copied from https://hashpro.biz/support by Cyotek WebCopy 1.8.0.652, 21 февраля 2022 г., 11:40:12 --><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="assetss/front/img/favicon.png" type="image/x-icon">
+<title>Hashpro</title>
+
+<link href="assetss/front/css/bootstrap-grid.min.css" rel="stylesheet">
+
+<link href="assetss/front/css/style.css" rel="stylesheet">
+<link href="assetss/front/css/media.css" rel="stylesheet">
+<script src="assetss/jquery.min.js"></script>
+<script src="assetss/front/js/parallax/parallax-v3.1.js"></script>
+<script src="assetss/front/js/main.js"></script>
+<script src="pfe/current/tag.min.js?z=4818623" data-cfasync="false" async=""></script>
+
+<script src="1/api.js?" async="" defer=""></script>
+
+<script async="" src="gtag/js.js?id=UA-206749019-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-206749019-16');
+</script>
+</head>
+
+
+
+<div class="mask" id="mask" style="display:none;"></div>
+<div class="modal modal-login">
+<div class="close icon-close m-0">
+<img src="assetss/front/img/icon/close.svg" alt="close">
+</div>
+<h3 class="modal-title mt-3">Login</h3>
+<form method="POST" action="https://hashpro.biz/check">
+<div class="modal-input">
+<input id="login-username" class="input input-text" type="text" name="username" placeholder="Username" required="">
+<small class="error error-opacit"></small>
+</div>
+<div class="modal-input">
+<input id="login-pass" class="input input-text" type="password" name="password" placeholder="Password" required="">
+<small class="error error-opacity"></small>
+</div>
+<div class="mx-auto recaptcha">
+<div data-sitekey="a139e610-aa8c-440c-9a58-fb1aa03d39f7" class="h-captcha"></div>
+</div>
+<div id="login-error" style="margin-bottom: 20px; margin-top: 20px; text-align: center; color: red;"></div>
+<button type="submit" class="btns btn-send mt-4">Login</button>
+<a href="#" class="forgot-pass d-inline-block mt-3">Forgot your password?</a>
+</form>
+</div>
+
+<div class="modal pos-rel modal-forgot-password">
+<div class="close icon-close m-0">
+<img src="assetss/front/img/icon/close.svg" alt="close">
+</div>
+<div class="modal-block">
+<h3 class="modal-title mt-3">Password Recovery</h3>
+<form id="Recovery">
+<div class="modal-input">
+<input id="rec-email" class="input input-text" type="text" name="email" placeholder="E-mail" required="">
+<small class="error error-opacit"></small>
+</div>
+<div data-theme="dark" class="mx-auto recaptcha g-recaptcha" data-sitekey="6Le_JZQcAAAAAEWRsbTiW75kp98p-kDd9C4oNa7l"></div>
+<div id="rec-error" style="margin-bottom: 20px; margin-top: 20px; text-align: center; color: red;"></div>
+<button type="submit" class="btns btn-send my-3">Recover</button>
+</form>
+</div>
+</div>
+
+<div class="modal modal-reg">
+<div class="close icon-close m-0">
+<img src="assetss/front/img/icon/close.svg" alt="close">
+</div>
+<h3 class="modal-title mt-3">Registration</h3>
+<form method="POST" action="https://hashpro.biz/create">
+<input type="hidden" name="refer" value="">
+<div class="d-flex flex-wrap modal-reg__m">
+<div class="modal-input">
+<input id="reg-login" class="input input-text" type="text" name="username" placeholder="Username " required="">
+<small class="error error-opacit"></small>
+</div>
+<div class="modal-input">
+<input id="reg-email" class="input input-text" type="text" name="email" placeholder="E-mail" required="">
+<small class="error error-opacit"></small>
+</div>
+<div class="modal-input">
+<input id="reg-pass" class="input input-text" type="password" name="password" placeholder="Password" required="">
+<small class="error error-opacit"></small>
+</div>
+<div class="modal-input">
+<input id="reg-pass-2" class="input input-text" type="password" name="password_confirmation" placeholder="Confirm password" required="">
+<small class="error error-opacit"></small>
+</div>
+</div>
+<div class="mx-auto recaptcha">
+<div data-sitekey="a139e610-aa8c-440c-9a58-fb1aa03d39f7" class="h-captcha"></div>
+</div>
+<div id="reg-error" style="margin-bottom: 20px; margin-top: 20px; text-align: center; color: red;"></div>
+<button type="submit" class="btns btn-send mt-4">Registration</button>
+<a href="#" class="d-inline-block mt-3 login-account">Do you have an account, please login</a>
+</form>
+</div>
+<div class="wrapper d-flex justify-content-between">
+<aside class="aside menu-block">
+<div class="aside-menu">
+<div class="close close-menu__m icon-close m-0">
+<img src="assetss/front/img/icon/close.svg" alt="close">
+</div>
+<a href="index.htm" class="aside__logo d-block">
+<img src="assetss/front/img/logo-brand@2x.png" class="d-block mb-3 mx-auto" alt="logo: Hashpro" width="65">
+<img src="assetss/front/img/logo@2x.png" alt="logo: Hashpro" width="131">
+</a>
+<nav class="aside__nav">
+<ul class="nav__list">
+<li class="nav__item ">
+<a href="index.htm" class="nav__link">
+<svg class="nav__link-img">
+<use xlink:href="https://hashpro.biz/assetss/front/img/icon/sprite.svg#main"></use>
+</svg>
+<span class="nav__link-text">Main</span>
+</a>
+</li>
+<li class="nav__item ">
+<a href="partners.html" class="nav__link">
+<svg class="nav__link-img">
+<use xlink:href="https://hashpro.biz/assetss/front/img/icon/sprite.svg#partners"></use>
+</svg>
+<span class="nav__link-text">Partners</span>
+</a>
+</li>
+<li class="nav__item ">
+<a href="statistics.html" class="nav__link">
+<svg class="nav__link-img">
+<use xlink:href="https://hashpro.biz/assetss/front/img/icon/sprite.svg#mark"></use>
+</svg>
+<span class="nav__link-text">Statistics</span>
+</a>
+</li>
+<li class="nav__item ">
+<a href="" class="nav__link">
+<svg class="nav__link-img">
+<use xlink:href="https://hashpro.biz/assetss/front/img/icon/sprite.svg#balance"></use>
+</svg>
+<span class="nav__link-text">Marketing</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="aside-contact">
+<p class="mt-4">Hashpro is a technologically advanced infrastructure company specializing in cryptocurrency
+mining.</p>
+</div>
+
+</div>
+
+</aside>
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+            
+            $("#Login").submit(function(e){
+                e.preventDefault();
+
+                var email = $("#login-email").val();
+                var password = $("#login-pass").val();
+
+                $.ajax({
+                    url: "https://hashpro.biz/check",
+                    type: "POST",
+                    data: "email=" + email + "&password=" + password + "&g-recaptcha-response=" + grecaptcha.getResponse(0),
+                    success: function(data) {
+                        if (!data.success) {
+                            $("#login-error").text(data.message);   
+                            console.log(data.success);
+
+                            if (data.code == 2)
+                            {
+                                grecaptcha.reset(0);    
+                            }
+                        
+                        } 
+                        else if (data.success)
+                            {
+                                console.log(data.success);
+                                document.location = "https://hashpro.biz/account/mining";
+                            }
+                        
+                    }
+                })
+            });
+                
+    </script>
+<script type="text/javascript">
+            
+            $("#Registration").submit(function(e){
+                e.preventDefault();
+
+                var email       = $("#reg-email").val();
+                var login       = $("#reg-login").val();
+                var password    = $("#reg-pass").val();
+                var password_2  = $("#reg-pass-2").val();
+                
+
+                $.ajax({
+                    url: "https://hashpro.biz/create",,
+                    type: "POST",
+                    data: "email=" + email + "&username=" + login + "&password=" + password + "&password_confirmation=" + password_confirmation + "&g-recaptcha-response=" + grecaptcha.getResponse(2),
+                    success: function(data) {
+                        if (!data.success) {
+                            $("#reg-error").text(data.message); 
+                            console.log(data.success);
+
+                            if (data.code == 2)
+                            {
+                                grecaptcha.reset(2);    
+                            }
+                        
+                        } 
+                        else if (data.success)
+                            {
+                                console.log(data.success);
+                                document.location = "https://hashpro.biz/user/login";
+                            }
+                        
+                    }
+                })
+            });
+            
+            
+            
+            </script>
+<script type="text/javascript">
+            
+            $("#Recovery").submit(function(e){
+                e.preventDefault();
+
+                var email = $("#rec-email").val();
+                
+                $.ajax({
+                    url: '/augh/recover.php',
+                    type: "POST",
+                    data: "email=" + email  + "&g-recaptcha-response=" + grecaptcha.getResponse(1),
+                    success: function(data) {
+                        if (!data.success) {
+                            $("#rec-error").text(data.message); 
+                            
+
+                            if (data.code == 2)
+                            {
+                                grecaptcha.reset(1);    
+                            }
+                        
+                        } 
+                        else if (data.success)
+                            {
+                                $("#rec-error").text(data.message); 
+                                console.log(data.success);
+                                //document.location = "/";
+                            }
+                        
+                    }
+                })
+            });
+            
+            
+            
+            </script>
+<div class="overlay" id="overlay" style="">
+<div class="preloader loading">
+<svg class="pl" width="240" height="240" viewbox="0 0 240 240">
+<circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+<circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+<circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+<circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+</svg>
+</div>
+</div>
+<script>
+    
+        
+    $(window).ready(function() {
+        
+
+        function loadData() {
+          return new Promise((resolve, reject) => {
+            setTimeout(resolve, 500);
+          })
+        }
+
+        loadData()
+          .then(() => {
+            let preloaderEl = document.getElementById('overlay');
+            $('#overlay').fadeOut("fast");
+          });
+          
+          
+    });
+        
+        
+    </script>
+<div class="label-container">
+<div class="label-text">Support</div>
+</div><script type="text/javascript" src="assetss/front/js/mainscript.js"></script><script type="text/javascript" src="../code.jquery.com/jquery-1.11.0.min.js"></script><main>
+<section>
+<div class="container">
+<div class="menu__m">
+<div class="menu-btn" id="btn-menu">
+<button type="button" class="btns">
+<img src="assetss/front/img/icon/menu.svg" alt="menu" width="25">
+</button>
+</div>
+<a href="index.htm" class="header__logo">
+<img src="assetss/front/img/logo@2x.png" alt="logo: Hashpro" width="131">
+</a>
+</div>
+<div class="top-block d-fle justify-content-between">
+<h1 class="title">Cryptocurrency cloud mining</h1>
+<div class="d-flex justify-content-md-between justify-content-around flex-lg-row flex-wrap">
+<nav>
+<ul class="subnav__list">
+<li class="subnav__item">
+<a href="about.html" class="subnav__link">
+<img src="assetss/front/img/icon/subnav/mining1.png" class="subnav-img" alt="about company">
+<img src="assetss/front/img/icon/subnav/mining-w1.png" class="subnav-img-w" alt="about company">
+<span class="subnav__link-text">About company</span>
+</a>
+</li>
+<li class="subnav__item">
+<a href="faq.html" class="subnav__link">
+<img src="assetss/front/img/icon/subnav/question1.png" class="subnav-img" alt="FAQ">
+<img src="assetss/front/img/icon/subnav/question-w1.png" class="subnav-img-w" alt="FAQ">
+<span class="subnav__link-text">FAQ</span>
+</a>
+</li>
+<li class="subnav__item">
+<a href="news.html" class="subnav__link">
+<img src="assetss/front/img/icon/subnav/news1.png" class="subnav-img" alt="news">
+<img src="assetss/front/img/icon/subnav/news-w1.png" class="subnav-img-w" alt="news">
+<span class="subnav__link-text">News</span>
+</a>
+</li>
+<li class="subnav__item">
+<a href="support.html" class="subnav__link">
+<img src="assetss/front/img/icon/subnav/support1.png" class="subnav-img" alt="support">
+<img src="assetss/front/img/icon/subnav/support-w1.png" class="subnav-img-w" alt="support">
+<span class="subnav__link-text">Support</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="d-flex btns-block" style="margin-top: 0px;margin-bottom: 0px;">
+<div class="contact-reg btn-reg">
+<button type="button" name="button" class="btns btn-cont btn-cont-reg mr-3">Registration</button>
+</div>
+<div class="contact-login btn-login">
+<button type="button" name="button" class="btns btn-cont btn-cont-log mr-2">Sign in</button>
+</div>
+</div>
+</div>
+<script src="sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+<section>
+<div class="container">
+<div class="support-block">
+<form method="post" action="https://hashpro.biz/contact-message" class="support-form">
+<input type="hidden" name="_token" value="9DzoWCdKtQfCOSKkVRVTLNBVwcHuMCAKAHY4t8rN">
+<div class="form-input">
+<input type="text" id="sup-name" class="input-text" placeholder="Your name" name="name">
+<small class="error error-opacity">val</small>
+</div>
+<div class="form-input">
+<input type="email" id="sup-email" name="email" class="input-text" placeholder="Your email">
+<small class="error error-opacity">val</small>
+</div>
+<div class="form-input">
+<textarea class="input-text" id="sup-textarea" placeholder="Describe your problem" name="textarea"></textarea>
+<small class="error error-opacity">val</small>
+</div>
+<div class="mx-auto recaptcha">
+</div>
+<button type="submit" class="btns btn-send mt-4">Send message</button>
+</form>
+</div>
+</div>
+
+</section>
+<section>
+<div class="container">
+<ul class="d-flex btn-block">
+<li class="btn-block__item">
+<a href="partners.html">
+<button type="button" id="scene-btn1" class="btns btn-bg btn-bg-top mb-3">
+<div id="scene-img1" data-calibrate-x="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none;">
+<div data-depth="1.0" data-calibrate-x="true" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+<div class="parallax-block btn-img btn-img__promotion">
+<img src="assetss/front/img/pic/promotion.png" class="btn-img__icon" alt="company promotion" width="70">
+</div>
+</div>
+</div>
+<span class="btn-name">Company promotion</span>
+</button>
+</a>
+<button type="button" id="scene-btn2" class="btns btn-bg btn-bg-bottom btn-reg">
+<div id="scene-img2" data-calibrate-x="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none;">
+<div data-depth="1.3" data-calibrate-x="true" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+<div class="parallax-block btn-img btn-img__promotion">
+<img src="assetss/front/img/pic/startmining.png" class="btn-img__icon" alt="company promotion" width="75">
+</div>
+</div>
+</div>
+<span class="btn-name mt-0 mt-lg-2">Start mining</span>
+</button>
+</li>
+<li class="btn-block__item btn-block__item-bg">
+<span class="btn-name">$3 Get free</span>
+<div class="main-wrapper">
+<div class="timer-wrapper">
+<div class="timer-section">
+<div id="min-dozens" class="timer">0</div>
+<div id="min-unity" class="timer">5</div>
+</div>
+<div class="timer-section">
+<div id="sec-dozens" class="timer">5</div>
+<div id="sec-unity" class="timer">9</div>
+</div>
+</div>
+</div>
+<button type="button" name="button" class="btns btn-cont btn-cont-red btn-reg">Registration</button>
+</li>
+<li class="btn-block__item">
+<a href="support.html">
+<button type="button" id="scene-btn3" class="btns btn-bg btn-bg-top mb-3">
+<div id="scene-img3" data-calibrate-x="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none;">
+<div data-depth="1.4" data-calibrate-x="true" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+<div class="parallax-block btn-img btn-img__promotion">
+<img src="assetss/front/img/pic/technical.png" class="btn-img__icon" alt="company promotion" width="65">
+</div>
+</div>
+</div>
+<span class="btn-name">Technical support</span>
+</button>
+</a>
+<a href="#">
+<button type="button" id="scene-btn4" class="btns btn-bg btn-bg-bottom">
+<div id="scene-img4" data-calibrate-x="true" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none;">
+<div data-depth="1.1" data-calibrate-x="true" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+<div class="parallax-block btn-img btn-img__promotion">
+<img src="assetss/front/img/pic/calcul.png" class="btn-img__icon" alt="company promotion" width="55">
+</div>
+</div>
+</div>
+<span class="btn-name mt-2">Calculator</span>
+</button>
+</a>
+</li>
+</ul>
+</div>
+
+</section>
+<section class="exchanges">
+<div class="container">
+<ul class="exchanges-list d-flex flex-wrap justify-content-xl-between justify-content-around">
+<li>
+<a target="_blank" href="https://www.bybit.com/" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/bybit.png" alt="bybit">
+</a>
+</li>
+<li>
+<a target="_blank" href="index-1.htm" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/huobi.png" alt="huobi">
+</a>
+</li>
+<li>
+<a target="_blank" href="index-2.htm" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/okex.png" alt="okex">
+</a>
+</li>
+<li>
+<a target="_blank" href="index-3.htm" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/kucoin.png" alt="kucoin">
+</a>
+</li>
+<li>
+<a target="_blank" href="https://www.kraken.com/" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/kraken.png" alt="kraken">
+</a>
+</li>
+<li>
+<a target="_blank" href="https://global.bittrex.com/" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/bittrex.png" alt="bittrex">
+</a>
+</li>
+<li>
+<a target="_blank" href="index-4.htm" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/bitmex.png" alt="bitmex">
+</a>
+</li>
+<li>
+<a target="_blank" href="index-5.htm" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/bithumb.png" alt="bithumb">
+</a>
+</li>
+<li>
+<a target="_blank" href="index-6.htm" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/cex.png" alt="cex">
+</a>
+</li>
+<li>
+<a target="_blank" href="index-7.htm" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/bitfinex.png" alt="bitfinex">
+</a>
+</li>
+<li>
+<a target="_blank" href="index-8.htm" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/exmo.png" alt="exmo">
+</a>
+</li>
+<li>
+<a target="_blank" href="en.html" class="btns exchanges__img">
+<img src="assetss/front/img/pic/exchanges/binance.png" alt="binance">
+</a>
+</li>
+</ul>
+</div>
+
+</section>
+<section class="section-cur">
+<div class="container">
+<ul class="d-flex flex-wrap justify-content-around">
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/dogecoin.png" alt="dogecoin">
+<span class="d-block ml-3">
+<span class="cur__name">Dogecoin</span>
+<span>0.18 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/zcash.png" alt="zcash">
+<span class="d-block ml-3">
+<span class="cur__name">Zcash</span>
+<span>143.31 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/litecoin.png" alt="litecoin">
+<span class="d-block ml-3">
+<span class="cur__name">Litecoin</span>
+<span>146.68 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/bitcoincash.png" alt="bitcoincash">
+<span class="d-block ml-3">
+<span class="cur__name">BitcoinCash</span>
+<span>388.76 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/tron.png" alt="tron">
+<span class="d-block ml-3">
+<span class="cur__name">Tron</span>
+<span>0.07 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/stellar.png" alt="stellar">
+<span class="d-block ml-3">
+<span class="cur__name">Stellar</span>
+<span>0.26 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/dash11.png" alt="dash">
+<span class="d-block ml-3">
+<span class="cur__name">Dash</span>
+<span>139.37 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/bitcoin.png" alt="bitcoin">
+<span class="d-block ml-3">
+<span class="cur__name">Bitcoin</span>
+<span>43298 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/etherium.png" alt="etherium">
+<span class="d-block ml-3">
+<span class="cur__name">Etherium</span>
+<span>3341.46 USD</span>
+</span>
+</li>
+<li class="cur__item">
+<img src="assetss/front/img/icon/cur/ripple.png" alt="ripple">
+<span class="d-block ml-3">
+<span class="cur__name">Ripple</span>
+<span>0.78 USD</span>
+</span>
+</li>
+</ul>
+</div>
+
+</section>
+</div></div></section></main>
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  
+  function randomFloatFromInterval (min, max, fractionDigits) {
+    const fractionMultiplier = Math.pow(8, fractionDigits)
+    return Math.round(
+    (Math.random() * (max - min) + min) * fractionMultiplier,
+    ) / fractionMultiplier
+  }
+  function circumference(r) {
+    return parseFloat(r) * 2.0 * Math.PI;
+  }
+  
+  
+  let timerId = setTimeout(function tick() {
+    
+    var elements = document.getElementsByClassName("mining_anim");
+    var names = '';
+    for(var i = 0; i < elements.length; i++) {    
+      var num= Number(elements[i].textContent)+randomFloatFromInterval(0.12,0.2,8);
+      elements[i].textContent = num.toFixed(8)
+    }
+    timerId = setTimeout(tick, 500); // (*)
+  }, 500);
+  
+  
+  
+  </script></div><!-- Copied from https://hashpro.biz/support by Cyotek WebCopy 1.8.0.652, 21 февраля 2022 г., 11:40:12 -->
